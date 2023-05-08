@@ -6,7 +6,7 @@ import { getAllMovies } from '../../services/api'
 import { Container } from '../../styles/styled'
 import Title from '../../components/Title/Title'
 import { useParams } from 'react-router'
-import Loader from '../../components/Loader/Loader'
+import SkeletonBox from '../../components/Skeleton/SkeletonBox'
 
 const PER_PAGE = 20
 
@@ -42,7 +42,7 @@ function Series() {
          <Container>
             {
                isLoading ?
-               <Loader /> :
+               <SkeletonBox /> :
                <>
                   <Title title="Сериалы" />
                   <MovieList movies={movies} />

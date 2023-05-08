@@ -1,35 +1,62 @@
+.skelton_box {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 0.5rem;
+   padding: 1.5rem 0;
+
+   @media (min-width: 600px) {
+      & {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+
+   @media (min-width: 992px) {
+      & {
+         grid-template-columns: repeat(4, 1fr);
+      }
+   }
+
+   @media (min-width: 1200px) {
+      & {
+         grid-template-columns: repeat(5, 1fr);
+      }
+   }
+}
+
 .card {
    display: flex;
+   height: 320px;
    flex-direction: column;
-   width: 300px;
-   border: 1px solid #ccc;
    border-radius: 8px;
    overflow: hidden;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.card-image {
-   height: 200px;
-   background-color: #f5f5f5;
-}
+   &-image {
+      height: 200px;
+      background-color: rgba(255, 255, 255, 0.08);
+   }
 
-.card-body {
-   padding: 16px;
-}
+   &-body {
+      padding: 16px 0;
+      height: 120px;
 
-.card-title {
-   margin-bottom: 8px;
-   height: 24px;
-   background-color: #f5f5f5;
-}
+      &-title {
+         margin-bottom: 12px;
+         height: 15px;
+         background-color: rgba(255, 255, 255, 0.08);
+         border-radius: 7px;
+      }
+      
+      &-description {
+         height: 12px;
+         background-color: rgba(255, 255, 255, 0.08);
+         border-radius: 7px;
+      }
+   }
 
-.card-description {
-   height: 16px;
-   background-color: #f5f5f5;
-}
-
-.loading {
-   animation: loading 1.5s ease-in-out infinite;
+   .loading {
+      animation: loading 1.5s ease-in-out infinite;
+   }
 }
 
 @keyframes loading {
