@@ -52,7 +52,6 @@ function Movies() {
                         baseURL="movies"
                         total={total}
                      />
-
                   </>
             }
          </Container>
