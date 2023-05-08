@@ -1,0 +1,44 @@
+.pagination {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 20px 0;
+   .page_btn {
+      padding: 6px 8px;
+      background-color: #1F2937;
+      color: #ffffff75;
+      transition: .15s all;
+      border: .5px solid #ffffff34;
+      outline: none;
+      cursor: pointer;
+      font-size: 14px;
+      @media (min-width:360px) {
+         padding: 8px 14px;
+      }
+      &:active {
+         transform: scale(0.9);
+      }
+      &.active, &:hover {
+         background-color: #3d4757;
+         color: #fff;
+         font-weight: 600;
+      }
+   }
+   .prev_btn, .next_btn {
+      padding: 6px 10px;
+      @media (min-width:360px) {
+         padding: 8px 17px;
+      }
+   }
+   .prev_btn {
+      border-radius: 7px 0 0 7px;
+   }
+   
+   .next_btn {
+      border-radius: 0 7px 7px 0;
+   }
+}
+
+
+
+
